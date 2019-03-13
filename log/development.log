@@ -1788,3 +1788,10 @@ Processing by ProductsController#create as */*
 [active_model_serializers]   [1m[36mOrder Load (0.1ms)[0m  [1mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 24]]
 [active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (1.51ms)
 Completed 201 Created in 7ms (Views: 1.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/products/new" for 162.224.160.244 at 2019-03-13 02:30:43 +0000
+Cannot render console from 162.224.160.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
