@@ -24,7 +24,7 @@
 <script type="text/javascript" charset="utf-8">
   $(function() {
     $('form').submit(function(event){
-
+      event.preventDefault();
       let values = $(this).serialize();
       let posting = $.post('/products', values)
 
@@ -34,7 +34,6 @@
         $("#productPrice").text(product["price"]);
         $("#productInventory").text(product["inventory"]);
         $("#productDescription").text(product["description"]);
-        event.preventDefault();
       })
     })
   })
