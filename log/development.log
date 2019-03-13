@@ -1834,3 +1834,15 @@ Cannot render console from 162.224.160.244! Allowed networks: 127.0.0.1, ::1, 12
 Processing by ProductsController#new as HTML
   Rendered products/new.html.erb within layouts/application (593.1ms)
 Completed 200 OK in 797ms (Views: 771.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/products" for 162.224.160.244 at 2019-03-13 02:33:19 +0000
+Cannot render console from 162.224.160.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jgd/g+WCymmVPP5vgs94kerJl2Hi0xZNvWp6zBFyTLY37ZlRJW5p/JEYbcdUmSU2TwdkTddUylmzQ7bU74I48w==", "product"=>{"name"=>"asas", "price"=>"234", "description"=>"sd", "inventory"=>"34"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "asas"], ["description", "sd"], ["inventory", 34], ["price", 234], ["created_at", "2019-03-13 02:33:19.353344"], ["updated_at", "2019-03-13 02:33:19.353344"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 27]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (51.84ms)
+Completed 201 Created in 93ms (Views: 86.3ms | ActiveRecord: 3.5ms)
