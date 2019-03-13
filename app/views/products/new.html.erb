@@ -1,15 +1,15 @@
 <h1>New Product</h1>
 <%= form_for @product do |f| %>
-  <%= f.label :name, 'Name' %>
+  <%= f.label :name %>
   <%= f.text_field :name %>
   <br />
-  <%= f.label :price, 'Price' %>
+  <%= f.label :price %>
   <%= f.text_field :price %>
   <br />
-  <%= f.label :description, 'Description' %>
+  <%= f.label :description %>
   <%= f.text_area :description %>
   <br />
-  <%= f.label :inventory, 'Inventory' %>
+  <%= f.label :inventory %>
   <%= f.text_field :inventory %>
   <%= f.submit "submit" %>
 <% end %>
