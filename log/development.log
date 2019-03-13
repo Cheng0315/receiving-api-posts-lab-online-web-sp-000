@@ -1910,3 +1910,10 @@ Cannot render console from 162.224.160.244! Allowed networks: 127.0.0.1, ::1, 12
 Processing by ProductsController#new as HTML
   Rendered products/new.html.erb within layouts/application (629.1ms)
 Completed 200 OK in 833ms (Views: 807.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/new" for 162.224.160.244 at 2019-03-13 04:29:28 +0000
+Cannot render console from 162.224.160.244! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
